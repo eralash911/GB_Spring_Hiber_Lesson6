@@ -9,6 +9,7 @@ import ru.shein.entities.Customer;
 import ru.shein.entities.OrderData;
 import ru.shein.entities.Product;
 
+
 import java.util.List;
 
 @Component
@@ -25,7 +26,7 @@ public class ProductDao
 
         sessionFactory = sf;
     }
-//--------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
     public Product createProduct (String title, double cost)
     {
