@@ -1,0 +1,41 @@
+server:
+  port: 12440
+  servlet:
+    context-path: /market
+
+spring: # < конфигурируем спринг-окружение
+  datasource: # < спринговый стандартный бин для подключения к базе данных
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mydatabase;MODE=PostgreSQL
+    username: sa
+    password:
+  jpa: # < указываем реализацию JPA (по умолчанию будет подключен хибер-т)
+    show-sql: true # < показывать сгенерированные запросы хибер-та
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect # < диалект
+  h2: # < необязательная настройка БД (Спринг дружит с h2 и позволяет делать такую настройку)
+    console:
+      enabled: true # < поддержка H2-консоли
+      settings:
+        web-allow-others: false # < закрыть доступ к этой консоли из других WEB-приложений
+        #(только из браузера можно)
+jwt:
+  secret: $2a$12$c4HYjryn7vo1bYQfSzkUDe8jPhYIpInbUKZmv5lGnmcyrQPLIWnVu
+  lifetime: 36000000 #10ч
+
+# ___________________________________________________________
+# Следующие свойства загружаются на «этапе @PostConstruct».
+app:
+  cart:
+    prefix: 'GB_RU_J7_WEBSHOP_V1_'
+    life: 130
+#  product:
+#    price:
+#      min: 0.01   в бухгалтерии сказали, что они уволятся нах., если эта настройка окажется в релизе…
+#      #max: 9999999.99 #если перед запятой >7 знаков, то число считывается в эксп.виде: 1.999999999E7.
+views:
+  shop:
+    page:
+      items: 7
+
