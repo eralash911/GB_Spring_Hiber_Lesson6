@@ -1,4 +1,4 @@
-package ru.shein.beans.daos;
+package ru.shein.beans.repositories;
 
 
 import org.hibernate.Session;
@@ -9,11 +9,13 @@ import ru.shein.entities.Customer;
 import ru.shein.entities.OrderData;
 import ru.shein.entities.Product;
 
+
 import java.util.List;
 
 @Component
 public class ProductDao
 {
+
     private final SessionFactory sessionFactory;
 
 
@@ -25,7 +27,7 @@ public class ProductDao
 
         sessionFactory = sf;
     }
-//--------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
     public Product createProduct (String title, double cost)
     {
