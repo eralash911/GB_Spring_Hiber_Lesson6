@@ -4,8 +4,8 @@ package ru.shein.beans.services;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.shein.beans.daos.CustomerDao;
-import ru.shein.beans.daos.ProductDao;
+import ru.shein.beans.repositories.CustomerDao;
+import ru.shein.beans.repositories.ProductDao;
 import ru.shein.entities.Customer;
 import ru.shein.entities.Product;
 

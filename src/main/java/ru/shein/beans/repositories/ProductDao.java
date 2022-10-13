@@ -1,4 +1,4 @@
-package ru.shein.beans.daos;
+package ru.shein.beans.repositories;
 
 
 import org.hibernate.Session;
@@ -15,6 +15,7 @@ import java.util.List;
 @Component
 public class ProductDao
 {
+
     private final SessionFactory sessionFactory;
 
 

@@ -1,4 +1,4 @@
-package ru.shein.beans.daos;
+package ru.shein.beans.repositories;
 
 
 import org.hibernate.Session;
